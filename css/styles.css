@@ -32,7 +32,7 @@ header {
     width: 100%;
     z-index: 1000;
     margin: 0.5rem;
-    /* any number > 0 usually works */
+
 }
 
 header h1 {
@@ -84,7 +84,14 @@ main {
     position: absolute;
     top: 15vh;
     width: 100%;
-    padding: 1rem
+    padding: 1rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    main {
+        top: 20vh;
+    }
 }
 
 /*box*/
@@ -97,7 +104,8 @@ main {
     justify-content: center;
 }
 
-.box img, .box video {
+.box img,
+.box video {
     max-width: 90vw;
     max-height: 80vh;
     margin-top: 2rem;
@@ -120,7 +128,8 @@ main {
     justify-content: center;
 }
 
-.oversized img, .oversized video {
+.oversized img,
+.oversized video {
     max-width: 90vw;
     margin-top: 2rem;
 }
@@ -139,6 +148,7 @@ main {
 
 .grid {
     display: grid;
+    
 }
 
 .grid-static {
@@ -214,6 +224,7 @@ main {
 @media (max-width: 1023px) {
     .grid {
         grid-template-columns: repeat(4, 1fr);
+        font-size: 0.8rem;
     }
 
     .grid-static {
@@ -223,10 +234,13 @@ main {
 
     .grid-false {
         width: calc((100vw - 2rem) / 4);
+        margin-bottom: 1rem;
     }
 
     .grid-true {
         width: calc((100vw - 2rem) / 4);
+
+        margin-bottom: 1rem;
 
     }
 }
@@ -249,10 +263,28 @@ main {
     width: 100%;
     object-fit: contain;
 }
+
 .grid-4-item p {
     border: 1px solid black;
     padding: 1rem
 }
+
+@media (max-width: 1023px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-4-item {
+        width: calc((100vw - 2rem) / 2);
+
+    }
+}
+
+
+
+
+
+
 
 
 /*2 column*/
@@ -308,6 +340,56 @@ main {
     font-family: 'bianzhidai';
     letter-spacing: 0.25em;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .side-column {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .side-column-left,
+    .side-column-left-proj {
+        width: 90vw;
+    }
+
+    .side-column-left img {
+        width: 60vw;
+    }
+
+    .side-column-left p {
+        font-family: 'bianzhidai';
+        font-size: 0.8rem;
+        letter-spacing: 0.25em;
+    }
+
+    .side-column-left-proj img {
+        width: 80vw;
+    }
+
+    .side-column-right {
+        width: 90vw;
+    }
+
+    .side-column-right p {
+        text-align: justify;
+    }
+
+    .side-column-right img {
+        max-width: 80vw;
+    }
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
